@@ -1,7 +1,10 @@
 """LLM-судья: получает изменение в SQL, заявленное как рефакторинг, и решает,
 изменит ли оно результат запроса.
 
-python -m sqljudge.judge --models claude-opus-5-5 claude-haiku-5-5 --repeats 3 [--limit 2]
+python -m sqljudge.judge --models ollama:qwen3:8b ollama:gemma3:4b --repeats 3 [--limit 2]
+python -m sqljudge.judge --models claude-opus-5-5 claude-haiku-5-5 --repeats 3   # платно, нужен ключ в .env
+
+Модель с префиксом "ollama:" идёт в локальный сервер Ollama, остальные — в Claude API.
 
 Ответы копятся в reports/runs.jsonl. Повторный запуск продолжает с места
 остановки и не платит дважды за уже полученные ответы.
@@ -11,6 +14,8 @@ import difflib
 import json
 import os
 import threading
+import urllib.error
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -83,6 +88,34 @@ def ask(client: anthropic.Anthropic, model: str, prompt: str) -> dict:
     return {**json.loads(next(b.text for b in r.content if b.type == "text")), **usage}
 
 
+OLLAMA_URL = "http://127.0.0.1:11434/api/chat"
+
+
+def ask_ollama(model: str, prompt: str) -> dict:
+    """Один вызов локальной модели. format со схемой заставляет ответить нужным JSON.
+    num_ctx задан явно: с контекстом по умолчанию длинный промпт молча обрезается."""
+    body = json.dumps({
+        "model": model, "stream": False, "format": VERDICT_SCHEMA,
+        "options": {"num_ctx": 8192},
+        "messages": [{"role": "system", "content": SYSTEM + " Respond in JSON."},
+                     {"role": "user", "content": prompt}],
+    }).encode()
+    req = urllib.request.Request(OLLAMA_URL, body, {"Content-Type": "application/json"})
+    try:
+        with urllib.request.urlopen(req, timeout=900) as resp:
+            r = json.load(resp)
+    except (urllib.error.URLError, TimeoutError) as e:
+        return {"error": f"ollama: {e}"}
+    usage = {"input_tokens": r.get("prompt_eval_count", 0), "output_tokens": r.get("eval_count", 0)}
+    try:
+        out = json.loads(r["message"]["content"])
+        if out.get("verdict") not in ("changed", "equivalent"):
+            raise ValueError("нет вердикта")
+    except (KeyError, ValueError) as e:
+        return {"error": f"bad_answer ({r.get('done_reason')}): {e}", **usage}
+    return {**out, **usage}
+
+
 def load_env() -> None:
     """Читает .env проекта: ключ не должен попадать в код и историю команд."""
     env = ROOT / ".env"
@@ -98,11 +131,11 @@ def main() -> None:
     ap.add_argument("--models", nargs="+", required=True)
     ap.add_argument("--repeats", type=int, default=3)
     ap.add_argument("--limit", type=int, help="взять только первые N задач (пробный запуск)")
-    ap.add_argument("--workers", type=int, default=4)
+    ap.add_argument("--workers", type=int, default=4, help="для локальных моделей ставить 1")
     args = ap.parse_args()
 
     load_env()
-    client = anthropic.Anthropic()
+    client = None if all(m.startswith("ollama:") for m in args.models) else anthropic.Anthropic()
     items = verify.build_tasks()[: args.limit]
     profile = data.profile(data.build(tasks.LATEST_TXN.sql))
 
@@ -121,7 +154,8 @@ def main() -> None:
 
     def run(job):
         model, context, task, rep = job
-        out = ask(client, model, build_prompt(task, context, profile))
+        prompt = build_prompt(task, context, profile)
+        out = ask_ollama(model.removeprefix("ollama:"), prompt) if model.startswith("ollama:") else ask(client, model, prompt)
         row = {"model": model, "context": context, "task": task["id"], "rep": rep,
                "label": task["label"], "silent": task["silent"], "class": task["class"], **out}
         with lock, open(RUNS, "a", encoding="utf-8") as f:
