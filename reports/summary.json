@@ -1,0 +1,494 @@
+{
+  "by_model_context": [
+    {
+      "model": "ollama:gemma3:4b",
+      "context": "diff",
+      "n": 120,
+      "accuracy": 0.575,
+      "recall_changed": 1.0,
+      "recall_silent": 1.0,
+      "false_alarm": 1.0,
+      "unstable_tasks": 0,
+      "input_tokens": 69723,
+      "output_tokens": 8202
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "context": "profile",
+      "n": 120,
+      "accuracy": 0.575,
+      "recall_changed": 1.0,
+      "recall_silent": 1.0,
+      "false_alarm": 1.0,
+      "unstable_tasks": 0,
+      "input_tokens": 202803,
+      "output_tokens": 12383
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "context": "schema",
+      "n": 120,
+      "accuracy": 0.575,
+      "recall_changed": 1.0,
+      "recall_silent": 1.0,
+      "false_alarm": 1.0,
+      "unstable_tasks": 0,
+      "input_tokens": 160443,
+      "output_tokens": 11956
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "context": "diff",
+      "n": 120,
+      "accuracy": 0.717,
+      "recall_changed": 0.739,
+      "recall_silent": 0.75,
+      "false_alarm": 0.314,
+      "unstable_tasks": 7,
+      "input_tokens": 61377,
+      "output_tokens": 7420
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "context": "profile",
+      "n": 120,
+      "accuracy": 0.65,
+      "recall_changed": 0.754,
+      "recall_silent": 0.8,
+      "false_alarm": 0.49,
+      "unstable_tasks": 16,
+      "input_tokens": 181377,
+      "output_tokens": 8010
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "context": "schema",
+      "n": 120,
+      "accuracy": 0.642,
+      "recall_changed": 0.696,
+      "recall_silent": 0.717,
+      "false_alarm": 0.431,
+      "unstable_tasks": 13,
+      "input_tokens": 142977,
+      "output_tokens": 8022
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "context": "diff",
+      "n": 120,
+      "accuracy": 0.867,
+      "recall_changed": 0.913,
+      "recall_silent": 0.917,
+      "false_alarm": 0.196,
+      "unstable_tasks": 8,
+      "input_tokens": 61617,
+      "output_tokens": 125532
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "context": "profile",
+      "n": 120,
+      "accuracy": 0.858,
+      "recall_changed": 0.855,
+      "recall_silent": 0.9,
+      "false_alarm": 0.137,
+      "unstable_tasks": 6,
+      "input_tokens": 181617,
+      "output_tokens": 156648
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "context": "schema",
+      "n": 120,
+      "accuracy": 0.867,
+      "recall_changed": 0.826,
+      "recall_silent": 0.85,
+      "false_alarm": 0.078,
+      "unstable_tasks": 11,
+      "input_tokens": 143217,
+      "output_tokens": 149602
+    }
+  ],
+  "by_class": [
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "agg",
+      "n": 18,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "boundary",
+      "n": 36,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "dedup",
+      "n": 18,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "fanout",
+      "n": 36,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "grain",
+      "n": 18,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "join",
+      "n": 18,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "null",
+      "n": 27,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "refactor",
+      "n": 153,
+      "correct": 0.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "scd2",
+      "n": 9,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "timezone",
+      "n": 9,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "window",
+      "n": 18,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "agg",
+      "n": 18,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "boundary",
+      "n": 36,
+      "correct": 0.722
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "dedup",
+      "n": 18,
+      "correct": 0.944
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "fanout",
+      "n": 36,
+      "correct": 0.806
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "grain",
+      "n": 18,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "join",
+      "n": 18,
+      "correct": 0.5
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "null",
+      "n": 27,
+      "correct": 0.148
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "refactor",
+      "n": 153,
+      "correct": 0.588
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "scd2",
+      "n": 9,
+      "correct": 0.778
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "timezone",
+      "n": 9,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "window",
+      "n": 18,
+      "correct": 0.778
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "agg",
+      "n": 18,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "boundary",
+      "n": 36,
+      "correct": 0.778
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "dedup",
+      "n": 18,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "fanout",
+      "n": 36,
+      "correct": 0.75
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "grain",
+      "n": 18,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "join",
+      "n": 18,
+      "correct": 0.833
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "null",
+      "n": 27,
+      "correct": 0.704
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "refactor",
+      "n": 153,
+      "correct": 0.863
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "scd2",
+      "n": 9,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "timezone",
+      "n": 9,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "window",
+      "n": 18,
+      "correct": 1.0
+    }
+  ],
+  "hardest": [
+    {
+      "task": "cohort_retention/count_star_numerator",
+      "label": "equivalent",
+      "correct": 0.037,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/date_literal",
+      "label": "equivalent",
+      "correct": 0.185,
+      "n": 27
+    },
+    {
+      "task": "latest_txn/order_by_version_only",
+      "label": "equivalent",
+      "correct": 0.259,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/unfiltered_cohort_size",
+      "label": "equivalent",
+      "correct": 0.333,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/is_current_in_where",
+      "label": "equivalent",
+      "correct": 0.407,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/not_in_with_null",
+      "label": "changed",
+      "correct": 0.444,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/count_order_no",
+      "label": "equivalent",
+      "correct": 0.481,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/not_in_list",
+      "label": "equivalent",
+      "correct": 0.519,
+      "n": 27
+    },
+    {
+      "task": "client_monthly/case_instead_of_filter",
+      "label": "equivalent",
+      "correct": 0.556,
+      "n": 27
+    },
+    {
+      "task": "client_monthly/is_deleted_false",
+      "label": "equivalent",
+      "correct": 0.556,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/filter_moved_to_on",
+      "label": "changed",
+      "correct": 0.556,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/prefilter_cte",
+      "label": "equivalent",
+      "correct": 0.556,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/anti_join",
+      "label": "equivalent",
+      "correct": 0.556,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/inline_window",
+      "label": "equivalent",
+      "correct": 0.556,
+      "n": 27
+    },
+    {
+      "task": "client_monthly/not_equal_as_not",
+      "label": "equivalent",
+      "correct": 0.593,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/month_number_diff",
+      "label": "changed",
+      "correct": 0.593,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/no_distinct_in_purchases",
+      "label": "equivalent",
+      "correct": 0.63,
+      "n": 27
+    },
+    {
+      "task": "latest_txn/qualify",
+      "label": "equivalent",
+      "correct": 0.667,
+      "n": 27
+    },
+    {
+      "task": "client_monthly/null_country_is_foreign",
+      "label": "changed",
+      "correct": 0.667,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/flipped_comparisons",
+      "label": "equivalent",
+      "correct": 0.667,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/case_instead_of_coalesce",
+      "label": "equivalent",
+      "correct": 0.667,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/join_raw_returns",
+      "label": "changed",
+      "correct": 0.667,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/null_format_included",
+      "label": "changed",
+      "correct": 0.741,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/join_all_versions",
+      "label": "changed",
+      "correct": 0.815,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/inclusive_valid_to",
+      "label": "changed",
+      "correct": 0.852,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/dense_rank",
+      "label": "changed",
+      "correct": 0.852,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/days_div_30",
+      "label": "changed",
+      "correct": 0.889,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/current_segment",
+      "label": "changed",
+      "correct": 0.926,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/join_all_store_versions",
+      "label": "changed",
+      "correct": 0.926,
+      "n": 27
+    },
+    {
+      "task": "latest_txn/filter_deleted_first",
+      "label": "changed",
+      "correct": 0.963,
+      "n": 27
+    }
+  ]
+}
