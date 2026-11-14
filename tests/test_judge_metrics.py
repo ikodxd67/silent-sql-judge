@@ -34,3 +34,19 @@ def test_unstable_tasks():
     rows = [row("changed", "changed", task="a", rep=0), row("changed", "equivalent", task="a", rep=1),
             row("changed", "changed", task="b", rep=0), row("changed", "changed", task="b", rep=1)]
     assert metrics.unstable_tasks(rows) == 1
+
+
+def test_majority_and_jury_rules():
+    yes = metrics.majority([row("changed", "changed", rep=0), row("changed", "changed", rep=1), row("changed", "equivalent", rep=2)])
+    no = metrics.majority([row("changed", "equivalent", rep=i) for i in range(3)])
+    assert yes["t"]["verdict"] == "changed" and no["t"]["verdict"] == "equivalent"
+    assert metrics.jury([yes, no, no], "majority")[0]["verdict"] == "equivalent"
+    assert metrics.jury([yes, no, no], "any")[0]["verdict"] == "changed"
+    assert metrics.jury([yes, yes, no], "all")[0]["verdict"] == "equivalent"
+
+
+def test_mcnemar_counts_discordant_tasks():
+    a = {str(i): row("changed", "changed", task=str(i)) for i in range(6)}
+    b = {str(i): row("changed", "equivalent" if i < 5 else "changed", task=str(i)) for i in range(6)}
+    assert metrics.mcnemar(a, b) == {"only_first_right": 5, "only_second_right": 0, "p": 0.062}
+    assert metrics.mcnemar(a, a)["p"] == 1.0

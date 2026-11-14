@@ -3,135 +3,141 @@
     {
       "model": "ollama:gemma3:4b",
       "context": "diff",
-      "n": 120,
-      "accuracy": 0.575,
+      "n": 294,
+      "accuracy": 0.531,
       "recall_changed": 1.0,
       "recall_silent": 1.0,
       "false_alarm": 1.0,
       "unstable_tasks": 0,
-      "input_tokens": 69723,
-      "output_tokens": 8202
+      "input_tokens": 170490,
+      "output_tokens": 20173
     },
     {
       "model": "ollama:gemma3:4b",
       "context": "profile",
-      "n": 120,
-      "accuracy": 0.575,
+      "n": 294,
+      "accuracy": 0.531,
       "recall_changed": 1.0,
       "recall_silent": 1.0,
       "false_alarm": 1.0,
       "unstable_tasks": 0,
-      "input_tokens": 202803,
-      "output_tokens": 12383
+      "input_tokens": 496536,
+      "output_tokens": 29887
     },
     {
       "model": "ollama:gemma3:4b",
       "context": "schema",
-      "n": 120,
-      "accuracy": 0.575,
+      "n": 294,
+      "accuracy": 0.531,
       "recall_changed": 1.0,
       "recall_silent": 1.0,
       "false_alarm": 1.0,
       "unstable_tasks": 0,
-      "input_tokens": 160443,
-      "output_tokens": 11956
+      "input_tokens": 392754,
+      "output_tokens": 28422
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
       "context": "diff",
-      "n": 120,
-      "accuracy": 0.717,
-      "recall_changed": 0.739,
-      "recall_silent": 0.75,
-      "false_alarm": 0.314,
-      "unstable_tasks": 7,
-      "input_tokens": 61377,
-      "output_tokens": 7420
+      "n": 294,
+      "accuracy": 0.673,
+      "recall_changed": 0.801,
+      "recall_silent": 0.806,
+      "false_alarm": 0.471,
+      "unstable_tasks": 23,
+      "input_tokens": 150234,
+      "output_tokens": 18332
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
       "context": "profile",
-      "n": 120,
+      "n": 294,
       "accuracy": 0.65,
-      "recall_changed": 0.754,
-      "recall_silent": 0.8,
-      "false_alarm": 0.49,
-      "unstable_tasks": 16,
-      "input_tokens": 181377,
-      "output_tokens": 8010
+      "recall_changed": 0.833,
+      "recall_silent": 0.854,
+      "false_alarm": 0.558,
+      "unstable_tasks": 31,
+      "input_tokens": 444234,
+      "output_tokens": 19638
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
       "context": "schema",
-      "n": 120,
-      "accuracy": 0.642,
-      "recall_changed": 0.696,
-      "recall_silent": 0.717,
-      "false_alarm": 0.431,
-      "unstable_tasks": 13,
-      "input_tokens": 142977,
-      "output_tokens": 8022
+      "n": 294,
+      "accuracy": 0.653,
+      "recall_changed": 0.756,
+      "recall_silent": 0.764,
+      "false_alarm": 0.464,
+      "unstable_tasks": 34,
+      "input_tokens": 350154,
+      "output_tokens": 19603
     },
     {
       "model": "ollama:qwen3:8b",
       "context": "diff",
-      "n": 120,
-      "accuracy": 0.867,
-      "recall_changed": 0.913,
-      "recall_silent": 0.917,
-      "false_alarm": 0.196,
-      "unstable_tasks": 8,
-      "input_tokens": 61617,
-      "output_tokens": 125532
+      "n": 294,
+      "accuracy": 0.837,
+      "recall_changed": 0.885,
+      "recall_silent": 0.882,
+      "false_alarm": 0.217,
+      "unstable_tasks": 17,
+      "input_tokens": 150822,
+      "output_tokens": 305515
     },
     {
       "model": "ollama:qwen3:8b",
       "context": "profile",
-      "n": 120,
-      "accuracy": 0.858,
-      "recall_changed": 0.855,
-      "recall_silent": 0.9,
-      "false_alarm": 0.137,
-      "unstable_tasks": 6,
-      "input_tokens": 181617,
-      "output_tokens": 156648
+      "n": 294,
+      "accuracy": 0.864,
+      "recall_changed": 0.827,
+      "recall_silent": 0.84,
+      "false_alarm": 0.094,
+      "unstable_tasks": 17,
+      "input_tokens": 444822,
+      "output_tokens": 378326
     },
     {
       "model": "ollama:qwen3:8b",
       "context": "schema",
-      "n": 120,
-      "accuracy": 0.867,
-      "recall_changed": 0.826,
-      "recall_silent": 0.85,
-      "false_alarm": 0.078,
-      "unstable_tasks": 11,
-      "input_tokens": 143217,
-      "output_tokens": 149602
+      "n": 294,
+      "accuracy": 0.881,
+      "recall_changed": 0.84,
+      "recall_silent": 0.847,
+      "false_alarm": 0.072,
+      "unstable_tasks": 21,
+      "input_tokens": 350742,
+      "output_tokens": 370726
     }
   ],
   "by_class": [
     {
       "model": "ollama:gemma3:4b",
       "class": "agg",
-      "n": 18,
+      "n": 45,
       "correct": 1.0
     },
     {
       "model": "ollama:gemma3:4b",
       "class": "boundary",
-      "n": 36,
+      "n": 90,
       "correct": 1.0
     },
     {
       "model": "ollama:gemma3:4b",
       "class": "dedup",
-      "n": 18,
+      "n": 45,
       "correct": 1.0
     },
     {
       "model": "ollama:gemma3:4b",
       "class": "fanout",
-      "n": 36,
+      "n": 45,
+      "correct": 1.0
+    },
+    {
+      "model": "ollama:gemma3:4b",
+      "class": "filter",
+      "n": 27,
       "correct": 1.0
     },
     {
@@ -143,19 +149,19 @@
     {
       "model": "ollama:gemma3:4b",
       "class": "join",
-      "n": 18,
+      "n": 36,
       "correct": 1.0
     },
     {
       "model": "ollama:gemma3:4b",
       "class": "null",
-      "n": 27,
+      "n": 72,
       "correct": 1.0
     },
     {
       "model": "ollama:gemma3:4b",
       "class": "refactor",
-      "n": 153,
+      "n": 414,
       "correct": 0.0
     },
     {
@@ -167,38 +173,44 @@
     {
       "model": "ollama:gemma3:4b",
       "class": "timezone",
-      "n": 9,
+      "n": 27,
       "correct": 1.0
     },
     {
       "model": "ollama:gemma3:4b",
       "class": "window",
-      "n": 18,
+      "n": 54,
       "correct": 1.0
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
       "class": "agg",
-      "n": 18,
-      "correct": 1.0
+      "n": 45,
+      "correct": 0.956
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
       "class": "boundary",
-      "n": 36,
+      "n": 90,
       "correct": 0.722
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
       "class": "dedup",
-      "n": 18,
-      "correct": 0.944
+      "n": 45,
+      "correct": 0.978
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
       "class": "fanout",
-      "n": 36,
-      "correct": 0.806
+      "n": 45,
+      "correct": 0.844
+    },
+    {
+      "model": "ollama:qwen2.5-coder:7b",
+      "class": "filter",
+      "n": 27,
+      "correct": 0.963
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
@@ -209,20 +221,20 @@
     {
       "model": "ollama:qwen2.5-coder:7b",
       "class": "join",
-      "n": 18,
-      "correct": 0.5
+      "n": 36,
+      "correct": 0.444
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
       "class": "null",
-      "n": 27,
-      "correct": 0.148
+      "n": 72,
+      "correct": 0.625
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
       "class": "refactor",
-      "n": 153,
-      "correct": 0.588
+      "n": 414,
+      "correct": 0.502
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
@@ -233,38 +245,44 @@
     {
       "model": "ollama:qwen2.5-coder:7b",
       "class": "timezone",
-      "n": 9,
-      "correct": 1.0
+      "n": 27,
+      "correct": 0.889
     },
     {
       "model": "ollama:qwen2.5-coder:7b",
       "class": "window",
-      "n": 18,
-      "correct": 0.778
+      "n": 54,
+      "correct": 0.87
     },
     {
       "model": "ollama:qwen3:8b",
       "class": "agg",
-      "n": 18,
+      "n": 45,
       "correct": 1.0
     },
     {
       "model": "ollama:qwen3:8b",
       "class": "boundary",
-      "n": 36,
-      "correct": 0.778
+      "n": 90,
+      "correct": 0.9
     },
     {
       "model": "ollama:qwen3:8b",
       "class": "dedup",
-      "n": 18,
-      "correct": 1.0
+      "n": 45,
+      "correct": 0.911
     },
     {
       "model": "ollama:qwen3:8b",
       "class": "fanout",
-      "n": 36,
-      "correct": 0.75
+      "n": 45,
+      "correct": 0.756
+    },
+    {
+      "model": "ollama:qwen3:8b",
+      "class": "filter",
+      "n": 27,
+      "correct": 1.0
     },
     {
       "model": "ollama:qwen3:8b",
@@ -275,20 +293,20 @@
     {
       "model": "ollama:qwen3:8b",
       "class": "join",
-      "n": 18,
-      "correct": 0.833
+      "n": 36,
+      "correct": 0.694
     },
     {
       "model": "ollama:qwen3:8b",
       "class": "null",
-      "n": 27,
-      "correct": 0.704
+      "n": 72,
+      "correct": 0.764
     },
     {
       "model": "ollama:qwen3:8b",
       "class": "refactor",
-      "n": 153,
-      "correct": 0.863
+      "n": 414,
+      "correct": 0.872
     },
     {
       "model": "ollama:qwen3:8b",
@@ -299,14 +317,14 @@
     {
       "model": "ollama:qwen3:8b",
       "class": "timezone",
-      "n": 9,
-      "correct": 1.0
+      "n": 27,
+      "correct": 0.852
     },
     {
       "model": "ollama:qwen3:8b",
       "class": "window",
-      "n": 18,
-      "correct": 1.0
+      "n": 54,
+      "correct": 0.741
     }
   ],
   "hardest": [
@@ -323,9 +341,51 @@
       "n": 27
     },
     {
+      "task": "client_monthly/utc_plus_5",
+      "label": "equivalent",
+      "correct": 0.185,
+      "n": 27
+    },
+    {
+      "task": "latest_txn/rank_no_ties",
+      "label": "equivalent",
+      "correct": 0.222,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/interval_one_year",
+      "label": "equivalent",
+      "correct": 0.222,
+      "n": 27
+    },
+    {
       "task": "latest_txn/order_by_version_only",
       "label": "equivalent",
       "correct": 0.259,
+      "n": 27
+    },
+    {
+      "task": "latest_txn/max_version_subquery",
+      "label": "equivalent",
+      "correct": 0.259,
+      "n": 27
+    },
+    {
+      "task": "client_monthly/having_count",
+      "label": "equivalent",
+      "correct": 0.259,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/group_by_order_ts",
+      "label": "equivalent",
+      "correct": 0.296,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/group_by_all_refunds",
+      "label": "equivalent",
+      "correct": 0.296,
       "n": 27
     },
     {
@@ -335,7 +395,49 @@
       "n": 27
     },
     {
+      "task": "cohort_retention/integer_literal",
+      "label": "equivalent",
+      "correct": 0.333,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/sum_minus_sum_coalesce",
+      "label": "equivalent",
+      "correct": 0.333,
+      "n": 27
+    },
+    {
+      "task": "client_monthly/make_date",
+      "label": "equivalent",
+      "correct": 0.37,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/interval_in_where",
+      "label": "changed",
+      "correct": 0.37,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/drop_not_null_filter",
+      "label": "equivalent",
+      "correct": 0.37,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/lag_explicit_offset",
+      "label": "equivalent",
+      "correct": 0.37,
+      "n": 27
+    },
+    {
       "task": "store_monthly/is_current_in_where",
+      "label": "equivalent",
+      "correct": 0.407,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/not_greater_equal",
       "label": "equivalent",
       "correct": 0.407,
       "n": 27
@@ -347,13 +449,49 @@
       "n": 27
     },
     {
+      "task": "client_monthly/count_txn_id",
+      "label": "equivalent",
+      "correct": 0.444,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/group_by_all",
+      "label": "equivalent",
+      "correct": 0.444,
+      "n": 27
+    },
+    {
       "task": "customer_rfm/count_order_no",
       "label": "equivalent",
       "correct": 0.481,
       "n": 27
     },
     {
+      "task": "latest_txn/rn_less_than_2",
+      "label": "equivalent",
+      "correct": 0.481,
+      "n": 27
+    },
+    {
+      "task": "client_monthly/is_not_true",
+      "label": "equivalent",
+      "correct": 0.481,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/year_month_diff",
+      "label": "equivalent",
+      "correct": 0.481,
+      "n": 27
+    },
+    {
       "task": "store_monthly/not_in_list",
+      "label": "equivalent",
+      "correct": 0.519,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/first_value",
       "label": "equivalent",
       "correct": 0.519,
       "n": 27
@@ -395,6 +533,30 @@
       "n": 27
     },
     {
+      "task": "client_monthly/coalesce_to_kz",
+      "label": "equivalent",
+      "correct": 0.556,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/left_outer",
+      "label": "equivalent",
+      "correct": 0.556,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/not_in_filtered",
+      "label": "equivalent",
+      "correct": 0.556,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/group_by_1",
+      "label": "equivalent",
+      "correct": 0.556,
+      "n": 27
+    },
+    {
       "task": "client_monthly/not_equal_as_not",
       "label": "equivalent",
       "correct": 0.593,
@@ -407,7 +569,25 @@
       "n": 27
     },
     {
+      "task": "client_monthly/group_by_expressions",
+      "label": "equivalent",
+      "correct": 0.593,
+      "n": 27
+    },
+    {
       "task": "cohort_retention/no_distinct_in_purchases",
+      "label": "equivalent",
+      "correct": 0.63,
+      "n": 27
+    },
+    {
+      "task": "latest_txn/nulls_last",
+      "label": "equivalent",
+      "correct": 0.63,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/left_join_store",
       "label": "equivalent",
       "correct": 0.63,
       "n": 27
@@ -443,9 +623,51 @@
       "n": 27
     },
     {
+      "task": "customer_rfm/max_of_date",
+      "label": "equivalent",
+      "correct": 0.667,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/prefiltered_dim",
+      "label": "equivalent",
+      "correct": 0.667,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/running_min",
+      "label": "changed",
+      "correct": 0.667,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/sum_minus_sum",
+      "label": "changed",
+      "correct": 0.667,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/where_order_swapped",
+      "label": "equivalent",
+      "correct": 0.667,
+      "n": 27
+    },
+    {
       "task": "store_monthly/null_format_included",
       "label": "changed",
       "correct": 0.741,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/between",
+      "label": "changed",
+      "correct": 0.778,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/rank_tiebreak",
+      "label": "changed",
+      "correct": 0.778,
       "n": 27
     },
     {
@@ -467,7 +689,37 @@
       "n": 27
     },
     {
+      "task": "client_monthly/denominator_known_country",
+      "label": "changed",
+      "correct": 0.852,
+      "n": 27
+    },
+    {
+      "task": "client_monthly/utc_plus_6",
+      "label": "changed",
+      "correct": 0.852,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/interval_by_dates",
+      "label": "changed",
+      "correct": 0.852,
+      "n": 27
+    },
+    {
       "task": "cohort_retention/days_div_30",
+      "label": "changed",
+      "correct": 0.889,
+      "n": 27
+    },
+    {
+      "task": "latest_txn/order_ascending",
+      "label": "changed",
+      "correct": 0.889,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/utc_date",
       "label": "changed",
       "correct": 0.889,
       "n": 27
@@ -485,10 +737,429 @@
       "n": 27
     },
     {
+      "task": "daily_turnover/exclusive_valid_from",
+      "label": "changed",
+      "correct": 0.926,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/swapped_datediff",
+      "label": "changed",
+      "correct": 0.926,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/inner_join_refunds",
+      "label": "changed",
+      "correct": 0.926,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/window_descending",
+      "label": "changed",
+      "correct": 0.926,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/join_on_order_only",
+      "label": "changed",
+      "correct": 0.926,
+      "n": 27
+    },
+    {
       "task": "latest_txn/filter_deleted_first",
       "label": "changed",
       "correct": 0.963,
       "n": 27
+    },
+    {
+      "task": "latest_txn/global_max_version",
+      "label": "changed",
+      "correct": 0.963,
+      "n": 27
+    },
+    {
+      "task": "daily_turnover/count_client_not_distinct",
+      "label": "changed",
+      "correct": 0.963,
+      "n": 27
+    },
+    {
+      "task": "customer_rfm/interval_52_weeks",
+      "label": "changed",
+      "correct": 0.963,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/any_status",
+      "label": "changed",
+      "correct": 0.963,
+      "n": 27
+    },
+    {
+      "task": "cohort_retention/month_ge_1",
+      "label": "changed",
+      "correct": 0.963,
+      "n": 27
+    },
+    {
+      "task": "store_monthly/growth_other_denominator",
+      "label": "changed",
+      "correct": 0.963,
+      "n": 27
     }
-  ]
+  ],
+  "task_level": {
+    "judges": [
+      {
+        "model": "ollama:gemma3:4b",
+        "context": "diff",
+        "n": 98,
+        "accuracy": 0.531,
+        "recall_changed": 1.0,
+        "recall_silent": 1.0,
+        "false_alarm": 1.0,
+        "accuracy_ci95": [
+          0.429,
+          0.622
+        ]
+      },
+      {
+        "model": "ollama:gemma3:4b",
+        "context": "profile",
+        "n": 98,
+        "accuracy": 0.531,
+        "recall_changed": 1.0,
+        "recall_silent": 1.0,
+        "false_alarm": 1.0,
+        "accuracy_ci95": [
+          0.429,
+          0.622
+        ]
+      },
+      {
+        "model": "ollama:gemma3:4b",
+        "context": "schema",
+        "n": 98,
+        "accuracy": 0.531,
+        "recall_changed": 1.0,
+        "recall_silent": 1.0,
+        "false_alarm": 1.0,
+        "accuracy_ci95": [
+          0.429,
+          0.622
+        ]
+      },
+      {
+        "model": "ollama:qwen2.5-coder:7b",
+        "context": "diff",
+        "n": 98,
+        "accuracy": 0.684,
+        "recall_changed": 0.808,
+        "recall_silent": 0.812,
+        "false_alarm": 0.457,
+        "accuracy_ci95": [
+          0.592,
+          0.776
+        ]
+      },
+      {
+        "model": "ollama:qwen2.5-coder:7b",
+        "context": "profile",
+        "n": 98,
+        "accuracy": 0.673,
+        "recall_changed": 0.885,
+        "recall_silent": 0.917,
+        "false_alarm": 0.565,
+        "accuracy_ci95": [
+          0.582,
+          0.765
+        ]
+      },
+      {
+        "model": "ollama:qwen2.5-coder:7b",
+        "context": "schema",
+        "n": 98,
+        "accuracy": 0.673,
+        "recall_changed": 0.75,
+        "recall_silent": 0.75,
+        "false_alarm": 0.413,
+        "accuracy_ci95": [
+          0.582,
+          0.765
+        ]
+      },
+      {
+        "model": "ollama:qwen3:8b",
+        "context": "diff",
+        "n": 98,
+        "accuracy": 0.867,
+        "recall_changed": 0.904,
+        "recall_silent": 0.896,
+        "false_alarm": 0.174,
+        "accuracy_ci95": [
+          0.796,
+          0.929
+        ]
+      },
+      {
+        "model": "ollama:qwen3:8b",
+        "context": "profile",
+        "n": 98,
+        "accuracy": 0.888,
+        "recall_changed": 0.827,
+        "recall_silent": 0.833,
+        "false_alarm": 0.043,
+        "accuracy_ci95": [
+          0.816,
+          0.949
+        ]
+      },
+      {
+        "model": "ollama:qwen3:8b",
+        "context": "schema",
+        "n": 98,
+        "accuracy": 0.898,
+        "recall_changed": 0.846,
+        "recall_silent": 0.854,
+        "false_alarm": 0.043,
+        "accuracy_ci95": [
+          0.837,
+          0.959
+        ]
+      }
+    ],
+    "juries": [
+      {
+        "jury": "ollama:gemma3:4b x 3 contexts",
+        "rule": "majority",
+        "n": 98,
+        "accuracy": 0.531,
+        "recall_changed": 1.0,
+        "recall_silent": 1.0,
+        "false_alarm": 1.0,
+        "accuracy_ci95": [
+          0.429,
+          0.633
+        ]
+      },
+      {
+        "jury": "ollama:qwen2.5-coder:7b x 3 contexts",
+        "rule": "majority",
+        "n": 98,
+        "accuracy": 0.704,
+        "recall_changed": 0.827,
+        "recall_silent": 0.833,
+        "false_alarm": 0.435,
+        "accuracy_ci95": [
+          0.612,
+          0.796
+        ]
+      },
+      {
+        "jury": "ollama:qwen3:8b x 3 contexts",
+        "rule": "majority",
+        "n": 98,
+        "accuracy": 0.898,
+        "recall_changed": 0.846,
+        "recall_silent": 0.854,
+        "false_alarm": 0.043,
+        "accuracy_ci95": [
+          0.837,
+          0.949
+        ]
+      },
+      {
+        "jury": "all models @ diff",
+        "rule": "majority",
+        "n": 98,
+        "accuracy": 0.755,
+        "recall_changed": 0.981,
+        "recall_silent": 0.979,
+        "false_alarm": 0.5,
+        "accuracy_ci95": [
+          0.663,
+          0.837
+        ]
+      },
+      {
+        "jury": "ollama:qwen2.5-coder:7b + ollama:qwen3:8b @ diff",
+        "rule": "any",
+        "n": 98,
+        "accuracy": 0.755,
+        "recall_changed": 0.981,
+        "recall_silent": 0.979,
+        "false_alarm": 0.5,
+        "accuracy_ci95": [
+          0.663,
+          0.837
+        ]
+      },
+      {
+        "jury": "ollama:qwen2.5-coder:7b + ollama:qwen3:8b @ diff",
+        "rule": "all",
+        "n": 98,
+        "accuracy": 0.796,
+        "recall_changed": 0.731,
+        "recall_silent": 0.729,
+        "false_alarm": 0.13,
+        "accuracy_ci95": [
+          0.714,
+          0.878
+        ]
+      },
+      {
+        "jury": "all models @ schema",
+        "rule": "majority",
+        "n": 98,
+        "accuracy": 0.755,
+        "recall_changed": 0.904,
+        "recall_silent": 0.917,
+        "false_alarm": 0.413,
+        "accuracy_ci95": [
+          0.663,
+          0.837
+        ]
+      },
+      {
+        "jury": "ollama:qwen2.5-coder:7b + ollama:qwen3:8b @ schema",
+        "rule": "any",
+        "n": 98,
+        "accuracy": 0.755,
+        "recall_changed": 0.904,
+        "recall_silent": 0.917,
+        "false_alarm": 0.413,
+        "accuracy_ci95": [
+          0.663,
+          0.837
+        ]
+      },
+      {
+        "jury": "ollama:qwen2.5-coder:7b + ollama:qwen3:8b @ schema",
+        "rule": "all",
+        "n": 98,
+        "accuracy": 0.816,
+        "recall_changed": 0.692,
+        "recall_silent": 0.688,
+        "false_alarm": 0.043,
+        "accuracy_ci95": [
+          0.735,
+          0.898
+        ]
+      },
+      {
+        "jury": "all models @ profile",
+        "rule": "majority",
+        "n": 98,
+        "accuracy": 0.704,
+        "recall_changed": 0.962,
+        "recall_silent": 0.979,
+        "false_alarm": 0.587,
+        "accuracy_ci95": [
+          0.612,
+          0.796
+        ]
+      },
+      {
+        "jury": "ollama:qwen2.5-coder:7b + ollama:qwen3:8b @ profile",
+        "rule": "any",
+        "n": 98,
+        "accuracy": 0.704,
+        "recall_changed": 0.962,
+        "recall_silent": 0.979,
+        "false_alarm": 0.587,
+        "accuracy_ci95": [
+          0.612,
+          0.796
+        ]
+      },
+      {
+        "jury": "ollama:qwen2.5-coder:7b + ollama:qwen3:8b @ profile",
+        "rule": "all",
+        "n": 98,
+        "accuracy": 0.857,
+        "recall_changed": 0.75,
+        "recall_silent": 0.771,
+        "false_alarm": 0.022,
+        "accuracy_ci95": [
+          0.786,
+          0.929
+        ]
+      }
+    ],
+    "paired": [
+      {
+        "model": "ollama:gemma3:4b",
+        "first": "diff",
+        "second": "schema",
+        "only_first_right": 0,
+        "only_second_right": 0,
+        "p": 1.0
+      },
+      {
+        "model": "ollama:gemma3:4b",
+        "first": "diff",
+        "second": "profile",
+        "only_first_right": 0,
+        "only_second_right": 0,
+        "p": 1.0
+      },
+      {
+        "model": "ollama:gemma3:4b",
+        "first": "schema",
+        "second": "profile",
+        "only_first_right": 0,
+        "only_second_right": 0,
+        "p": 1.0
+      },
+      {
+        "model": "ollama:qwen2.5-coder:7b",
+        "first": "diff",
+        "second": "schema",
+        "only_first_right": 7,
+        "only_second_right": 6,
+        "p": 1.0
+      },
+      {
+        "model": "ollama:qwen2.5-coder:7b",
+        "first": "diff",
+        "second": "profile",
+        "only_first_right": 7,
+        "only_second_right": 6,
+        "p": 1.0
+      },
+      {
+        "model": "ollama:qwen2.5-coder:7b",
+        "first": "schema",
+        "second": "profile",
+        "only_first_right": 11,
+        "only_second_right": 11,
+        "p": 1.0
+      },
+      {
+        "model": "ollama:qwen3:8b",
+        "first": "diff",
+        "second": "schema",
+        "only_first_right": 5,
+        "only_second_right": 8,
+        "p": 0.581
+      },
+      {
+        "model": "ollama:qwen3:8b",
+        "first": "diff",
+        "second": "profile",
+        "only_first_right": 6,
+        "only_second_right": 8,
+        "p": 0.791
+      },
+      {
+        "model": "ollama:qwen3:8b",
+        "first": "schema",
+        "second": "profile",
+        "only_first_right": 3,
+        "only_second_right": 2,
+        "p": 1.0
+      }
+    ]
+  }
 }
